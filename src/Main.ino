@@ -6,6 +6,12 @@
 #include <Adafruit_PWMServoDriver.h>
 #include <Octosnake.h>
 
+//////////////////
+//PINES DE LEDS //
+//////////////////
+#define LED_DERECHO 5
+#define LED_IZQUIERDO 9
+
 /////////////////////////
 //DEFINICIÓN DE SERVOS //
 /////////////////////////
@@ -53,6 +59,7 @@ byte posicionesInicialesHombros[NUM_SERVOS_HOMBROS];
 #define DEFAULT 4
 
 void setup() {
+  init_all();
 }
 
 void loop() {
