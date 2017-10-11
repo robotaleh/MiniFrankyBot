@@ -9,6 +9,8 @@
 void init_all(){
   init_serial();
   delay(100);
+  init_posiciones_iniciales();
+  delay(100);
   init_servos();
   delay(100);
   init_leds();
@@ -72,4 +74,40 @@ void init_PCA9685_servos(){
 void init_leds(){
   pinMode(LED_DERECHO, OUTPUT);
   pinMode(LED_IZQUIERDO, OUTPUT);
+}
+
+/**
+* Establece los valores para las posiciones iniciales de cada grupo de servos
+*/
+void init_posiciones_iniciales(){
+  /////////////////////////////////////////
+  // Posiciones iniciales PIERNA IZQUIERDA //
+  /////////////////////////////////////////
+  posicionesInicialesPiernaIzquierda[0] = 130;
+  posicionesInicialesPiernaIzquierda[1] = 143;
+  posicionesInicialesPiernaIzquierda[2] = 170;
+  posicionesInicialesPiernaIzquierda[3] = 10;
+  posicionesInicialesPiernaIzquierda[4] = 25;
+
+  ///////////////////////////////////////////
+  // Posiciones iniciales PIERNA DERECHA //
+  ///////////////////////////////////////////
+  posicionesInicialesPiernaDerecha[0] = 60;
+  posicionesInicialesPiernaDerecha[1] = 28;
+  posicionesInicialesPiernaDerecha[2] = 18;
+  posicionesInicialesPiernaDerecha[3] = 161;
+  posicionesInicialesPiernaDerecha[4] = 146;
+
+  /////////////////////////////////////////
+  // Posiciones iniciales CADERA //
+  /////////////////////////////////////////
+  posicionesInicialesCadera[0] = 130;
+  posicionesInicialesCadera[1] = 58;
+  posicionesInicialesCadera[2] = 80;
+
+  /////////////////////////////////////////
+  // Posiciones iniciales HOMBROS //
+  /////////////////////////////////////////
+  posicionesInicialesHombros[0] = 180;
+  posicionesInicialesHombros[1] = 5;
 }

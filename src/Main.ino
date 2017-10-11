@@ -19,8 +19,8 @@
 #define NUM_SERVOS_PIERNA_DERECHA 5
 #define NUM_SERVOS_CADERA 3
 #define NUM_SERVOS_HOMBROS 2
-#define SERVOMIN  500 // Ancho de pulso mínimo
-#define SERVOMAX  2500 // Ancho de pulso máximo
+#define SERVOMIN  110 // Ancho de pulso mínimo
+#define SERVOMAX  500 // Ancho de pulso máximo
 
 ////////////////////
 //PINES DE SERVOS //
@@ -28,7 +28,7 @@
 short pinsServosPiernaIzquierda[] = {9, 13, 12, 1, 10}; // Los números son los índices de la PCA9685
 short pinsServosPiernaDerecha[] = {5, 3, 2, 0, 7}; // Los números son los índices de la PCA9685
 short pinsServosCadera[] = {14, 8, 6}; // Los números son los índices de la PCA9685
-short pinsServosHombros[] = {11, 3}; // Los servos de los hombros van directos al Arduino para dejar espacio en la PCA9685
+short pinsServosHombros[] = {3, 11}; // Los servos de los hombros van directos al Arduino para dejar espacio en la PCA9685
 
 
 ////////////////////////
