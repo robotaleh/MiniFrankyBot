@@ -1,7 +1,11 @@
-// Este fichero contendrá todos los movimientos y posiciones que
-// podrá adoptar el robot durante su funcionamiento.
+///////////////////////////////////////////////////////////////////
+// Este fichero contendrá todos los movimientos y posiciones que //
+// podrá adoptar el robot durante su funcionamiento.             //
+///////////////////////////////////////////////////////////////////
 
-
+/**
+* Establece todos los servos a su posición inicial.
+*/
 void init_position(){
   set_servo_position(pinsServosPiernaIzquierda[0], posicionesInicialesPiernaIzquierda[0]);
   set_servo_position(pinsServosPiernaIzquierda[1], posicionesInicialesPiernaIzquierda[1]);
