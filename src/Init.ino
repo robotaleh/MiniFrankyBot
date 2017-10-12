@@ -31,41 +31,25 @@ void init_serial(){
 void init_servos(){
   init_arduino_servos();
   init_PCA9685_servos();
+  init_position();
 }
 
 /**
-* Inizializa los servos conectados directamente al Arduino y establece su posicion inicial.
+* Inizializa los servos conectados directamente al Arduino
 */
 void init_arduino_servos(){
-  Servo servosHombros[NUM_SERVOS_HOMBROS];
   for (short servo = 0; servo < NUM_SERVOS_HOMBROS; servo++) {
     servosHombros[servo].attach(pinsServosHombros[servo]);
-    servosHombros[servo].write(posicionesInicialesHombros[servo]);
   }
 }
 
 /**
-* Inicizaliza los servos conectados a la PCA9685 y establece su posición inicial.
+* Inicizaliza los servos conectados a la PCA9685
 */
 void init_PCA9685_servos(){
   // Iniciar de la PCA9685 y establecer la frecuencia de funcionamiento.
   servoController.begin();
   servoController.setPWMFreq(50);
-
-  // Establecer posiciones para la PIERNA IZQUIERDA
-  for (short servo = 0; servo < NUM_SERVOS_PIERNA_IZQUIERDA; servo++) {
-    servoController.setPWM(pinsServosPiernaIzquierda[servo], 0, map(posicionesInicialesPiernaIzquierda[servo], 0, 180, SERVOMIN, SERVOMAX));
-  }
-
-  // Establecer posiciones para la PIERNA DERECHA
-  for (short servo = 0; servo < NUM_SERVOS_PIERNA_DERECHA; servo++) {
-    servoController.setPWM(pinsServosPiernaDerecha[servo], 0, map(posicionesInicialesPiernaDerecha[servo], 0, 180, SERVOMIN, SERVOMAX));
-  }
-
-  // Establecer posiciones para la CADERA
-  for (short servo = 0; servo < NUM_SERVOS_CADERA; servo++) {
-    servoController.setPWM(pinsServosCadera[servo], 0, map(posicionesInicialesCadera[servo], 0, 180, SERVOMIN, SERVOMAX));
-  }
 }
 
 /**

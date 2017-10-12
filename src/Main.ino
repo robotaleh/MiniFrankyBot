@@ -29,6 +29,7 @@ short pinsServosPiernaIzquierda[] = {9, 13, 12, 1, 10}; // Los números son los 
 short pinsServosPiernaDerecha[] = {5, 3, 2, 0, 7}; // Los números son los índices de la PCA9685
 short pinsServosCadera[] = {14, 8, 6}; // Los números son los índices de la PCA9685
 short pinsServosHombros[] = {3, 11}; // Los servos de los hombros van directos al Arduino para dejar espacio en la PCA9685
+Servo servosHombros[NUM_SERVOS_HOMBROS]; // Objetos Servo para los hombros
 
 
 ////////////////////////
