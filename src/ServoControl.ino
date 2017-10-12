@@ -23,17 +23,18 @@ void ejecutar_movimiento(short servosMovimiento[], short ajustesMovimiento[][5],
 		oscillatorMovimiento[servo].start();
 		oscillatorMovimiento[servo].setTime(millis());
 	}
+
+  // Inicia el contador de servos parados e inicia el bucle del movimiento mientras haya servos en movimiento.
 	byte countStopped = 0;
 	do {
 		for (byte servo = 0; servo < numServos; servo++) {
         set_servo_position(servosMovimiento[servo], oscillatorMovimiento[servo].refresh());
-
-			if (repeticiones > 0 && oscillatorMovimiento[servo].getLoops() >= repeticiones) {
+			if (repeticiones > 0 && oscillatorMovimiento[servo].getLoops() >= repeticiones && oscillatorMovimiento[servo].isRunning()) {
 				oscillatorMovimiento[servo].stop();
+        countStopped++;
 				if (ajustesMovimiento[servo][DEFAULT]) {
           set_servo_position(servosMovimiento[servo], ajustesMovimiento[servo][OFFSET]);
 				}
-				countStopped++;
 			}
 		}
 	} while (countStopped < numServos);
