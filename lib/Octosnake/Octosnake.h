@@ -30,6 +30,7 @@ class Oscillator{
         float getLoops();
         float getPhaseProgress();
         unsigned long getTime();
+        bool isRunning();
 
     private:
         int _period;

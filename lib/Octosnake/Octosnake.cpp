@@ -92,3 +92,7 @@ float Oscillator::degrees_to_time(float degrees){
 float Oscillator::getLoops(){
     return _loops+(((float)_delta_time/_period));
 }
+
+bool Oscillator::isRunning(){
+    return !_stop;
+}
