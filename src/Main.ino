@@ -5,6 +5,7 @@
 #include <Servo.h>
 #include <Adafruit_PWMServoDriver.h>
 #include <Octosnake.h>
+#include <Comandos.h>
 
 //////////////////
 //PINES DE LEDS //
@@ -58,6 +59,14 @@ byte posicionesInicialesHombros[NUM_SERVOS_HOMBROS];
 #define AMPLITUD 2
 #define FASE 3
 #define DEFAULT 4
+
+/////////////////////
+// VARIABLES PARA  //
+// COMUNICACIÓN BT //
+/////////////////////
+long last_update;
+char letra = ' ';
+String valor = "";
 
 void setup() {
   init_all();
