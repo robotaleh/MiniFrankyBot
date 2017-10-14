@@ -11,6 +11,7 @@
 * @param servo_offset Offset o ángulo a asignar al servo.
 */
 void set_servo_position(int id_servo, int servo_offset){
+  posicionesActualesPCA9685[id_servo] = servo_offset;
   servoController.setPWM(id_servo, 0, map(servo_offset, 0, 180, (int)SERVOMIN, (int)SERVOMAX));
 }
 

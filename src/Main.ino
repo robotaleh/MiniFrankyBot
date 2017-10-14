@@ -50,6 +50,12 @@ byte posicionesInicialesPiernaDerecha[NUM_SERVOS_PIERNA_DERECHA];
 byte posicionesInicialesCadera[NUM_SERVOS_CADERA];
 byte posicionesInicialesHombros[NUM_SERVOS_HOMBROS];
 
+///////////////////////////////////
+// ARRAYS DE POSICIONES ACTUALES //
+///////////////////////////////////
+int posicionesActualesPCA9685[15];
+
+
 //////////////////////////////
 //POSICIONES DE ARRAYS      //
 //POSICIONES DE MOVIMIENTOS //
