@@ -22,6 +22,9 @@ void init_position(){
   set_servo_position(pinsServosCadera[2], posicionesInicialesCadera[2]);
   set_servo_position(servosHombros[0], posicionesInicialesHombros[0]);
   set_servo_position(servosHombros[1], posicionesInicialesHombros[1]);
+  delay(100);
+}
+
 /**
 * Movimiento de agacharse lentamente que parte desde la posición inicial.
 * @param repeticiones Número de períodos a ejecutar
