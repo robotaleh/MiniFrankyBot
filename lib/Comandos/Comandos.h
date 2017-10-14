@@ -8,3 +8,6 @@
 
 #define BRAZO_DERECHO 'D'
 #define BRAZO_IZQUIERDO 'I'
+#define ADELANTE 'W'
+#define AIRKICK 'a'
+#define LOWKICK_DERECHA 'p'

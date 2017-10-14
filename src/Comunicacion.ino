@@ -48,6 +48,15 @@ void execute_task(char comando, int valor){
     break;
     case BRAZO_IZQUIERDO:
     break;
+    case ADELANTE:
+      mov_paso(1);
+    break;
+    case LOWKICK_DERECHA:
+      mov_lowkick_derecha(1);
+    break;
+    case AIRKICK:
+      mov_airKick();
+    break;
     default:
     init_position();
     break;
