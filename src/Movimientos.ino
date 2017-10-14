@@ -526,3 +526,4 @@ void mov_lowkick_derecha(int repeticiones){
   }
 }
 
+void mov_airKick(){
