@@ -96,6 +96,18 @@ void mov_agacharse(float repeticiones){
   ejecutar_movimiento(servosAgacharse, ajustesAgacharse, numServos, repeticiones);
 }
 
+void mov_salto(int repeticiones) {
+  short loops = 0;
+  do {
+
+    // Prepara el salto agachandose lentamente
+    mov_agacharse(0.25);
+    init_position();
+
+    loops ++;
+  } while(loops < repeticiones);
+
+}
 
 /**
  * Efectua un paso, compuesto por varios segmentos de movimientos.
