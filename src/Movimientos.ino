@@ -159,65 +159,65 @@ void mov_paso(int repeticiones){
 
     delay(100);
 
-    const byte numServosPaso2 = 4;
+    const byte numServosPaso2 = 2;
     short ajustesPaso2[numServosPaso2][5];
     short servosPaso2[numServosPaso2];
 
-    servosPaso2[0] = pinsServosPiernaDerecha[1];
-    servosPaso2[1] = pinsServosPiernaDerecha[2];
-    servosPaso2[2] = pinsServosPiernaDerecha[3];
-    servosPaso2[3] = pinsServosPiernaDerecha[4];
+    // servosPaso2[0] = pinsServosPiernaDerecha[1];
+    // servosPaso2[1] = pinsServosPiernaDerecha[2];
+    servosPaso2[0] = pinsServosPiernaDerecha[3];
+    servosPaso2[1] = pinsServosPiernaDerecha[4];
 
-    ajustesPaso2[0][OFFSET]           = posicionesInicialesPiernaDerecha[1];
+    // ajustesPaso2[0][OFFSET]           = posicionesInicialesPiernaDerecha[1];
+    // ajustesPaso2[0][PERIODO]          = 4000*speed;
+    // ajustesPaso2[0][AMPLITUD]         = 30;
+    // ajustesPaso2[0][FASE]             = 0;
+    // ajustesPaso2[0][DEFAULT]          = 0;
+    //
+    // ajustesPaso2[1][OFFSET]           = posicionesInicialesPiernaDerecha[2];
+    // ajustesPaso2[1][PERIODO]          = 4000*speed;
+    // ajustesPaso2[1][AMPLITUD]         = 30;
+    // ajustesPaso2[1][FASE]             = 0;
+    // ajustesPaso2[1][DEFAULT]          = 0;
+
+    ajustesPaso2[0][OFFSET]           = posicionesInicialesPiernaDerecha[3];
     ajustesPaso2[0][PERIODO]          = 4000*speed;
-    ajustesPaso2[0][AMPLITUD]         = 30;
-    ajustesPaso2[0][FASE]             = 0;
+    ajustesPaso2[0][AMPLITUD]         = 27;
+    ajustesPaso2[0][FASE]             = 180;
     ajustesPaso2[0][DEFAULT]          = 0;
 
-    ajustesPaso2[1][OFFSET]           = posicionesInicialesPiernaDerecha[2];
+    ajustesPaso2[1][OFFSET]           = posicionesInicialesPiernaDerecha[4];
     ajustesPaso2[1][PERIODO]          = 4000*speed;
-    ajustesPaso2[1][AMPLITUD]         = 30;
-    ajustesPaso2[1][FASE]             = 0;
+    ajustesPaso2[1][AMPLITUD]         = 27;
+    ajustesPaso2[1][FASE]             = 180;
     ajustesPaso2[1][DEFAULT]          = 0;
-
-    ajustesPaso2[2][OFFSET]           = posicionesInicialesPiernaDerecha[3];
-    ajustesPaso2[2][PERIODO]          = 4000*speed;
-    ajustesPaso2[2][AMPLITUD]         = 27;
-    ajustesPaso2[2][FASE]             = 180;
-    ajustesPaso2[2][DEFAULT]          = 0;
-
-    ajustesPaso2[3][OFFSET]           = posicionesInicialesPiernaDerecha[4];
-    ajustesPaso2[3][PERIODO]          = 4000*speed;
-    ajustesPaso2[3][AMPLITUD]         = 27;
-    ajustesPaso2[3][FASE]             = 180;
-    ajustesPaso2[3][DEFAULT]          = 0;
 
     ejecutar_movimiento(servosPaso2, ajustesPaso2, numServosPaso2, 0.25);
 
     delay(100);
 
-    const byte numServosPaso3 = 2;
-    short ajustesPaso3[numServosPaso3][5];
-    short servosPaso3[numServosPaso3];
-
-    servosPaso3[0] = pinsServosPiernaDerecha[1];
-    servosPaso3[1] = pinsServosPiernaDerecha[2];
-
-    ajustesPaso3[0][OFFSET]           = posicionesActualesPCA9685[servosPaso3[0]];
-    ajustesPaso3[0][PERIODO]          = 4000*speed;
-    ajustesPaso3[0][AMPLITUD]         = 40;
-    ajustesPaso3[0][FASE]             = 180;
-    ajustesPaso3[0][DEFAULT]          = 0;
-
-    ajustesPaso3[1][OFFSET]           = posicionesActualesPCA9685[servosPaso3[1]];
-    ajustesPaso3[1][PERIODO]          = 4000*speed;
-    ajustesPaso3[1][AMPLITUD]         = 40;
-    ajustesPaso3[1][FASE]             = 180;
-    ajustesPaso3[1][DEFAULT]          = 0;
-
-    ejecutar_movimiento(servosPaso3, ajustesPaso3, numServosPaso3, 0.25);
-
-    delay(100);
+    // const byte numServosPaso3 = 2;
+    // short ajustesPaso3[numServosPaso3][5];
+    // short servosPaso3[numServosPaso3];
+    //
+    // servosPaso3[0] = pinsServosPiernaDerecha[1];
+    // servosPaso3[1] = pinsServosPiernaDerecha[2];
+    //
+    // ajustesPaso3[0][OFFSET]           = posicionesActualesPCA9685[servosPaso3[0]];
+    // ajustesPaso3[0][PERIODO]          = 4000*speed;
+    // ajustesPaso3[0][AMPLITUD]         = 40;
+    // ajustesPaso3[0][FASE]             = 180;
+    // ajustesPaso3[0][DEFAULT]          = 0;
+    //
+    // ajustesPaso3[1][OFFSET]           = posicionesActualesPCA9685[servosPaso3[1]];
+    // ajustesPaso3[1][PERIODO]          = 4000*speed;
+    // ajustesPaso3[1][AMPLITUD]         = 40;
+    // ajustesPaso3[1][FASE]             = 180;
+    // ajustesPaso3[1][DEFAULT]          = 0;
+    //
+    // ejecutar_movimiento(servosPaso3, ajustesPaso3, numServosPaso3, 0.25);
+    //
+    // delay(100);
 
     const byte numServosPaso4 = 5;
     short ajustesPaso4[numServosPaso4][5];
