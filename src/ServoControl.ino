@@ -14,6 +14,14 @@ void set_servo_position(int id_servo, int servo_offset){
   servoController.setPWM(id_servo, 0, map(servo_offset, 0, 180, (int)SERVOMIN, (int)SERVOMAX));
 }
 
+void disable_servo(int id_servo){
+  servoController.setPWM(id_servo, 0, 0);
+}
+
+void disable_servo(Servo servo){
+  servo.detach();
+}
+
 /**
 * Función sobrecargada para asigarn cierto offset(ángulo) a cada uno de los servos conectados directamente al Arduino.
 * En este caso no hace falta mapear porque la librería Servo.h encargada de sus posiciones ya trabaja con ángulos nativamente.
