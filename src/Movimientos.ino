@@ -469,3 +469,60 @@ void mov_paso(int repeticiones){
 
 
 }
+
+void mov_lowkick_derecha(int repeticiones){
+
+  for (byte loops = 0; loops < repeticiones; loops++) {
+    const byte numServos = 6;
+    short ajustesPatada[numServos][5];
+    short servosPatada[numServos];
+
+    servosPatada[0] = pinsServosPiernaIzquierda[1];
+    servosPatada[1] = pinsServosPiernaIzquierda[2];
+    servosPatada[2] = pinsServosPiernaIzquierda[3];
+    servosPatada[3] = pinsServosPiernaIzquierda[4];
+    servosPatada[4] = pinsServosCadera[2];
+    servosPatada[5] = pinsServosPiernaDerecha[0];
+
+
+    ajustesPatada[0][OFFSET]           = posicionesInicialesPiernaIzquierda[1];
+    ajustesPatada[0][PERIODO]          = 1000;
+    ajustesPatada[0][AMPLITUD]         = 60;
+    ajustesPatada[0][FASE]             = 180;
+    ajustesPatada[0][DEFAULT]          = 0;
+
+    ajustesPatada[1][OFFSET]           = posicionesInicialesPiernaIzquierda[2];
+    ajustesPatada[1][PERIODO]          = 1000;
+    ajustesPatada[1][AMPLITUD]         = 60;
+    ajustesPatada[1][FASE]             = 180;
+    ajustesPatada[1][DEFAULT]          = 0;
+
+    ajustesPatada[2][OFFSET]           = posicionesInicialesPiernaIzquierda[3];
+    ajustesPatada[2][PERIODO]          = 1000;
+    ajustesPatada[2][AMPLITUD]         = 60;
+    ajustesPatada[2][FASE]             = 0;
+    ajustesPatada[2][DEFAULT]          = 0;
+
+    ajustesPatada[3][OFFSET]           = posicionesInicialesPiernaIzquierda[4];
+    ajustesPatada[3][PERIODO]          = 1000;
+    ajustesPatada[3][AMPLITUD]         = 60;
+    ajustesPatada[3][FASE]             = 0;
+    ajustesPatada[3][DEFAULT]          = 0;
+
+    ajustesPatada[4][OFFSET]           = posicionesInicialesCadera[2];
+    ajustesPatada[4][PERIODO]          = 1000;
+    ajustesPatada[4][AMPLITUD]         = 60;
+    ajustesPatada[4][FASE]             = 0;
+    ajustesPatada[4][DEFAULT]          = 0;
+
+    ajustesPatada[5][OFFSET]           = posicionesInicialesPiernaDerecha[0];
+    ajustesPatada[5][PERIODO]          = 1000;
+    ajustesPatada[5][AMPLITUD]         = 60;
+    ajustesPatada[5][FASE]             = 0;
+    ajustesPatada[5][DEFAULT]          = 0;
+
+    ejecutar_movimiento(servosPatada, ajustesPatada, numServos, 0.5);
+    delay(100);
+  }
+}
+
