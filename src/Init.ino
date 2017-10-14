@@ -68,19 +68,19 @@ void init_posiciones_iniciales(){
   // Posiciones iniciales PIERNA IZQUIERDA //
   /////////////////////////////////////////
   posicionesInicialesPiernaIzquierda[0] = 130;
-  posicionesInicialesPiernaIzquierda[1] = 143;
-  posicionesInicialesPiernaIzquierda[2] = 170;
-  posicionesInicialesPiernaIzquierda[3] = 10;
-  posicionesInicialesPiernaIzquierda[4] = 25;
+  posicionesInicialesPiernaIzquierda[1] = 133; //143
+  posicionesInicialesPiernaIzquierda[2] = 160; //170
+  posicionesInicialesPiernaIzquierda[3] = 20; //10
+  posicionesInicialesPiernaIzquierda[4] = 35; //25
 
   ///////////////////////////////////////////
   // Posiciones iniciales PIERNA DERECHA //
   ///////////////////////////////////////////
   posicionesInicialesPiernaDerecha[0] = 60;
-  posicionesInicialesPiernaDerecha[1] = 28;
-  posicionesInicialesPiernaDerecha[2] = 18;
-  posicionesInicialesPiernaDerecha[3] = 161;
-  posicionesInicialesPiernaDerecha[4] = 146;
+  posicionesInicialesPiernaDerecha[1] = 38; //28
+  posicionesInicialesPiernaDerecha[2] = 23; //18
+  posicionesInicialesPiernaDerecha[3] = 151; //161
+  posicionesInicialesPiernaDerecha[4] = 130; //146
 
   /////////////////////////////////////////
   // Posiciones iniciales CADERA //
