@@ -20,6 +20,7 @@
 #define NUM_SERVOS_PIERNA_DERECHA 5
 #define NUM_SERVOS_CADERA 3
 #define NUM_SERVOS_HOMBROS 2
+#define NUM_SERVOS_CODOS 2
 #define SERVOMIN  110 // Ancho de pulso mínimo
 #define SERVOMAX  500 // Ancho de pulso máximo
 
@@ -31,6 +32,7 @@ short pinsServosPiernaDerecha[] = {5, 3, 2, 0, 7}; // Los números son los índi
 short pinsServosCadera[] = {14, 8, 6}; // Los números son los índices de la PCA9685
 short pinsServosHombros[] = {3, 11}; // Los servos de los hombros van directos al Arduino para dejar espacio en la PCA9685
 Servo servosHombros[NUM_SERVOS_HOMBROS]; // Objetos Servo para los hombros
+short pinsServosCodos[] = {11, 4}; // Los números son los índices de la PCA9685
 
 
 ////////////////////////
@@ -41,6 +43,7 @@ Oscillator oscillatorPiernaIzquierda[NUM_SERVOS_PIERNA_IZQUIERDA];
 Oscillator oscillatorPiernaDerecha[NUM_SERVOS_PIERNA_DERECHA];
 Oscillator oscillatorCadera[NUM_SERVOS_CADERA];
 Oscillator oscillatorHombros[NUM_SERVOS_HOMBROS];
+Oscillator oscillatorCodos[NUM_SERVOS_CODOS];
 
 ///////////////////////////////////
 //ARRAYS DE POSICIONES INICIALES //
@@ -49,6 +52,7 @@ byte posicionesInicialesPiernaIzquierda[NUM_SERVOS_PIERNA_IZQUIERDA];
 byte posicionesInicialesPiernaDerecha[NUM_SERVOS_PIERNA_DERECHA];
 byte posicionesInicialesCadera[NUM_SERVOS_CADERA];
 byte posicionesInicialesHombros[NUM_SERVOS_HOMBROS];
+byte posicionesInicialesCodos[NUM_SERVOS_CODOS];
 
 ///////////////////////////////////
 // ARRAYS DE POSICIONES ACTUALES //
