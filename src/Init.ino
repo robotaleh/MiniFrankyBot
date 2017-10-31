@@ -95,4 +95,9 @@ void init_posiciones_iniciales(){
   posicionesInicialesHombros[0] = 165;
   posicionesInicialesHombros[1] = 15;
 
+  /////////////////////////////////////////
+  // Posiciones iniciales CODOS //
+  /////////////////////////////////////////
+  posicionesInicialesCodos[0] = 18;
+  posicionesInicialesCodos[1] = 150;
 }
