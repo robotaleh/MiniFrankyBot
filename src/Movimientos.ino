@@ -7,6 +7,7 @@
 * Establece todos los servos a su posición inicial.
 */
 void init_position(){
+  nipple_lights = false;
   set_servo_position(pinsServosPiernaIzquierda[0], posicionesInicialesPiernaIzquierda[0]);
   set_servo_position(pinsServosPiernaIzquierda[1], posicionesInicialesPiernaIzquierda[1]);
   set_servo_position(pinsServosPiernaIzquierda[2], posicionesInicialesPiernaIzquierda[2]);

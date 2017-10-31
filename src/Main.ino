@@ -78,9 +78,26 @@ long last_update;
 char letra = ' ';
 String valor = "";
 
+bool nipple_lights = false;
+
 void setup() {
   init_all();
 }
 
 void loop() {
+  update_tasks();
+
+  if(nipple_lights){
+    digitalWrite(LED_DERECHO, HIGH);
+    digitalWrite(LED_IZQUIERDO, HIGH);
+    delay(85);
+    digitalWrite(LED_DERECHO, LOW);
+    digitalWrite(LED_IZQUIERDO, LOW);
+    delay(85);
+  }else{
+    digitalWrite(LED_DERECHO, LOW);
+    digitalWrite(LED_IZQUIERDO, LOW);
+  }
+
+
 }
