@@ -173,25 +173,25 @@ void mov_paso(int repeticiones){
 
     ajustesPaso1[0][OFFSET]           = posicionesInicialesPiernaIzquierda[0];
     ajustesPaso1[0][PERIODO]          = 6000*speed;
-    ajustesPaso1[0][AMPLITUD]         = 15;
+    ajustesPaso1[0][AMPLITUD]         = 13;
     ajustesPaso1[0][FASE]             = 0;
     ajustesPaso1[0][DEFAULT]          = 0;
 
     ajustesPaso1[1][OFFSET]           = posicionesInicialesCadera[0];
     ajustesPaso1[1][PERIODO]          = 6000*speed;
-    ajustesPaso1[1][AMPLITUD]         = 15;
+    ajustesPaso1[1][AMPLITUD]         = 13;
     ajustesPaso1[1][FASE]             = 0;
     ajustesPaso1[1][DEFAULT]          = 0;
 
     ajustesPaso1[2][OFFSET]           = posicionesInicialesPiernaDerecha[0];
     ajustesPaso1[2][PERIODO]          = 6000*speed;
-    ajustesPaso1[2][AMPLITUD]         = 15;
+    ajustesPaso1[2][AMPLITUD]         = 13;
     ajustesPaso1[2][FASE]             = 0;
     ajustesPaso1[2][DEFAULT]          = 0;
 
     ajustesPaso1[3][OFFSET]           = posicionesInicialesCadera[2];
     ajustesPaso1[3][PERIODO]          = 6000*speed;
-    ajustesPaso1[3][AMPLITUD]         = 15;
+    ajustesPaso1[3][AMPLITUD]         = 13;
     ajustesPaso1[3][FASE]             = 270;
     ajustesPaso1[3][DEFAULT]          = 0;
 
@@ -203,22 +203,8 @@ void mov_paso(int repeticiones){
     short ajustesPaso2[numServosPaso2][5];
     short servosPaso2[numServosPaso2];
 
-    // servosPaso2[0] = pinsServosPiernaDerecha[1];
-    // servosPaso2[1] = pinsServosPiernaDerecha[2];
     servosPaso2[0] = pinsServosPiernaDerecha[3];
     servosPaso2[1] = pinsServosPiernaDerecha[4];
-
-    // ajustesPaso2[0][OFFSET]           = posicionesInicialesPiernaDerecha[1];
-    // ajustesPaso2[0][PERIODO]          = 4000*speed;
-    // ajustesPaso2[0][AMPLITUD]         = 30;
-    // ajustesPaso2[0][FASE]             = 0;
-    // ajustesPaso2[0][DEFAULT]          = 0;
-    //
-    // ajustesPaso2[1][OFFSET]           = posicionesInicialesPiernaDerecha[2];
-    // ajustesPaso2[1][PERIODO]          = 4000*speed;
-    // ajustesPaso2[1][AMPLITUD]         = 30;
-    // ajustesPaso2[1][FASE]             = 0;
-    // ajustesPaso2[1][DEFAULT]          = 0;
 
     ajustesPaso2[0][OFFSET]           = posicionesInicialesPiernaDerecha[3];
     ajustesPaso2[0][PERIODO]          = 4000*speed;
@@ -234,30 +220,7 @@ void mov_paso(int repeticiones){
 
     ejecutar_movimiento(servosPaso2, ajustesPaso2, numServosPaso2, 0.25);
 
-    delay(100);
-
-    // const byte numServosPaso3 = 2;
-    // short ajustesPaso3[numServosPaso3][5];
-    // short servosPaso3[numServosPaso3];
-    //
-    // servosPaso3[0] = pinsServosPiernaDerecha[1];
-    // servosPaso3[1] = pinsServosPiernaDerecha[2];
-    //
-    // ajustesPaso3[0][OFFSET]           = posicionesActualesPCA9685[servosPaso3[0]];
-    // ajustesPaso3[0][PERIODO]          = 4000*speed;
-    // ajustesPaso3[0][AMPLITUD]         = 40;
-    // ajustesPaso3[0][FASE]             = 180;
-    // ajustesPaso3[0][DEFAULT]          = 0;
-    //
-    // ajustesPaso3[1][OFFSET]           = posicionesActualesPCA9685[servosPaso3[1]];
-    // ajustesPaso3[1][PERIODO]          = 4000*speed;
-    // ajustesPaso3[1][AMPLITUD]         = 40;
-    // ajustesPaso3[1][FASE]             = 180;
-    // ajustesPaso3[1][DEFAULT]          = 0;
-    //
-    // ejecutar_movimiento(servosPaso3, ajustesPaso3, numServosPaso3, 0.25);
-    //
-    // delay(100);
+    delay(250);
 
     const byte numServosPaso4 = 5;
     short ajustesPaso4[numServosPaso4][5];
@@ -284,7 +247,7 @@ void mov_paso(int repeticiones){
 
     ajustesPaso4[2][OFFSET]           = posicionesActualesPCA9685[servosPaso4[2]];
     ajustesPaso4[2][PERIODO]          = 4000*speed;
-    ajustesPaso4[2][AMPLITUD]         = 15;
+    ajustesPaso4[2][AMPLITUD]         = 13;
     ajustesPaso4[2][FASE]             = 180;
     ajustesPaso4[2][DEFAULT]          = 0;
     //
@@ -321,25 +284,25 @@ void mov_paso(int repeticiones){
 
     ajustesPaso5[0][OFFSET]           = posicionesActualesPCA9685[servosPaso5[0]];
     ajustesPaso5[0][PERIODO]          = 6000*speed;
-    ajustesPaso5[0][AMPLITUD]         = 10;
+    ajustesPaso5[0][AMPLITUD]         = 8;
     ajustesPaso5[0][FASE]             = 180;
     ajustesPaso5[0][DEFAULT]          = 0;
 
     ajustesPaso5[1][OFFSET]           = posicionesActualesPCA9685[servosPaso5[1]];
     ajustesPaso5[1][PERIODO]          = 6000*speed;
-    ajustesPaso5[1][AMPLITUD]         = 10;
+    ajustesPaso5[1][AMPLITUD]         = 8;
     ajustesPaso5[1][FASE]             = 90;
     ajustesPaso5[1][DEFAULT]          = 0;
 
     ajustesPaso5[2][OFFSET]           = posicionesActualesPCA9685[servosPaso5[2]];
     ajustesPaso5[2][PERIODO]          = 6000*speed;
-    ajustesPaso5[2][AMPLITUD]         = 10;
+    ajustesPaso5[2][AMPLITUD]         = 8;
     ajustesPaso5[2][FASE]             = 180;
     ajustesPaso5[2][DEFAULT]          = 0;
 
     ajustesPaso5[3][OFFSET]           = posicionesActualesPCA9685[servosPaso5[3]];
     ajustesPaso5[3][PERIODO]          = 6000*speed;
-    ajustesPaso5[3][AMPLITUD]         = 10;
+    ajustesPaso5[3][AMPLITUD]         = 8;
     ajustesPaso5[3][FASE]             = 90;
     ajustesPaso5[3][DEFAULT]          = 0;
 
