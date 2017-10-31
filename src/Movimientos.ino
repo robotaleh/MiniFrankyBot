@@ -526,38 +526,38 @@ void mov_lowkick_derecha(int repeticiones){
 
 
     ajustesPatada[0][OFFSET]           = posicionesInicialesPiernaIzquierda[1];
-    ajustesPatada[0][PERIODO]          = 1000;
-    ajustesPatada[0][AMPLITUD]         = 60;
+    ajustesPatada[0][PERIODO]          = 1500;
+    ajustesPatada[0][AMPLITUD]         = 45;
     ajustesPatada[0][FASE]             = 180;
     ajustesPatada[0][DEFAULT]          = 0;
 
     ajustesPatada[1][OFFSET]           = posicionesInicialesPiernaIzquierda[2];
-    ajustesPatada[1][PERIODO]          = 1000;
-    ajustesPatada[1][AMPLITUD]         = 60;
+    ajustesPatada[1][PERIODO]          = 1500;
+    ajustesPatada[1][AMPLITUD]         = 45;
     ajustesPatada[1][FASE]             = 180;
     ajustesPatada[1][DEFAULT]          = 0;
 
     ajustesPatada[2][OFFSET]           = posicionesInicialesPiernaIzquierda[3];
-    ajustesPatada[2][PERIODO]          = 1000;
-    ajustesPatada[2][AMPLITUD]         = 60;
+    ajustesPatada[2][PERIODO]          = 1500;
+    ajustesPatada[2][AMPLITUD]         = 45;
     ajustesPatada[2][FASE]             = 0;
     ajustesPatada[2][DEFAULT]          = 0;
 
     ajustesPatada[3][OFFSET]           = posicionesInicialesPiernaIzquierda[4];
-    ajustesPatada[3][PERIODO]          = 1000;
-    ajustesPatada[3][AMPLITUD]         = 60;
+    ajustesPatada[3][PERIODO]          = 1500;
+    ajustesPatada[3][AMPLITUD]         = 45;
     ajustesPatada[3][FASE]             = 0;
     ajustesPatada[3][DEFAULT]          = 0;
 
     ajustesPatada[4][OFFSET]           = posicionesInicialesCadera[2];
-    ajustesPatada[4][PERIODO]          = 1000;
-    ajustesPatada[4][AMPLITUD]         = 60;
+    ajustesPatada[4][PERIODO]          = 1500;
+    ajustesPatada[4][AMPLITUD]         = 45;
     ajustesPatada[4][FASE]             = 0;
     ajustesPatada[4][DEFAULT]          = 0;
 
     ajustesPatada[5][OFFSET]           = posicionesInicialesPiernaDerecha[0];
-    ajustesPatada[5][PERIODO]          = 1000;
-    ajustesPatada[5][AMPLITUD]         = 60;
+    ajustesPatada[5][PERIODO]          = 1500;
+    ajustesPatada[5][AMPLITUD]         = 45;
     ajustesPatada[5][FASE]             = 0;
     ajustesPatada[5][DEFAULT]          = 0;
 
@@ -566,4 +566,609 @@ void mov_lowkick_derecha(int repeticiones){
   }
 }
 
+void mov_lowkick_izquierda(int repeticiones){
+
+  for (byte loops = 0; loops < repeticiones; loops++) {
+    const byte numServos = 6;
+    short ajustesPatada[numServos][5];
+    short servosPatada[numServos];
+
+    servosPatada[0] = pinsServosPiernaDerecha[1];
+    servosPatada[1] = pinsServosPiernaDerecha[2];
+    servosPatada[2] = pinsServosPiernaDerecha[3];
+    servosPatada[3] = pinsServosPiernaDerecha[4];
+    servosPatada[4] = pinsServosCadera[0];
+    servosPatada[5] = pinsServosPiernaIzquierda[0];
+
+
+    ajustesPatada[0][OFFSET]           = posicionesInicialesPiernaDerecha[1];
+    ajustesPatada[0][PERIODO]          = 1500;
+    ajustesPatada[0][AMPLITUD]         = 45;
+    ajustesPatada[0][FASE]             = 0;
+    ajustesPatada[0][DEFAULT]          = 0;
+
+    ajustesPatada[1][OFFSET]           = posicionesInicialesPiernaDerecha[2];
+    ajustesPatada[1][PERIODO]          = 1500;
+    ajustesPatada[1][AMPLITUD]         = 45;
+    ajustesPatada[1][FASE]             = 0;
+    ajustesPatada[1][DEFAULT]          = 0;
+
+    ajustesPatada[2][OFFSET]           = posicionesInicialesPiernaDerecha[3];
+    ajustesPatada[2][PERIODO]          = 1500;
+    ajustesPatada[2][AMPLITUD]         = 45;
+    ajustesPatada[2][FASE]             = 180;
+    ajustesPatada[2][DEFAULT]          = 0;
+
+    ajustesPatada[3][OFFSET]           = posicionesInicialesPiernaDerecha[4];
+    ajustesPatada[3][PERIODO]          = 1500;
+    ajustesPatada[3][AMPLITUD]         = 45;
+    ajustesPatada[3][FASE]             = 180;
+    ajustesPatada[3][DEFAULT]          = 0;
+
+    ajustesPatada[4][OFFSET]           = posicionesInicialesCadera[0];
+    ajustesPatada[4][PERIODO]          = 1500;
+    ajustesPatada[4][AMPLITUD]         = 60;
+    ajustesPatada[4][FASE]             = 180;
+    ajustesPatada[4][DEFAULT]          = 0;
+
+    ajustesPatada[5][OFFSET]           = posicionesInicialesPiernaIzquierda[0];
+    ajustesPatada[5][PERIODO]          = 1500;
+    ajustesPatada[5][AMPLITUD]         = 60;
+    ajustesPatada[5][FASE]             = 180;
+    ajustesPatada[5][DEFAULT]          = 0;
+
+    ejecutar_movimiento(servosPatada, ajustesPatada, numServos, 0.5);
+    delay(100);
+  }
+}
+
 void mov_airKick(){
+
+
+  const byte numServosPaso1 = 8;
+  short ajustesPaso1[numServosPaso1][5];
+  short servosPaso1[numServosPaso1];
+
+  servosPaso1[0] = pinsServosPiernaDerecha[1];
+  servosPaso1[1] = pinsServosPiernaDerecha[2];
+  servosPaso1[2] = pinsServosPiernaDerecha[3];
+  servosPaso1[3] = pinsServosPiernaDerecha[4];
+  servosPaso1[4] = pinsServosPiernaIzquierda[1];
+  servosPaso1[5] = pinsServosPiernaIzquierda[2];
+  servosPaso1[6] = pinsServosPiernaIzquierda[3];
+  servosPaso1[7] = pinsServosPiernaIzquierda[4];
+
+  ajustesPaso1[0][OFFSET]           = posicionesInicialesPiernaDerecha[1];
+  ajustesPaso1[0][PERIODO]          = 1000;
+  ajustesPaso1[0][AMPLITUD]         = 50;
+  ajustesPaso1[0][FASE]             = 0;
+  ajustesPaso1[0][DEFAULT]          = 0;
+
+  ajustesPaso1[1][OFFSET]           = posicionesInicialesPiernaDerecha[2];
+  ajustesPaso1[1][PERIODO]          = 1000;
+  ajustesPaso1[1][AMPLITUD]         = 50;
+  ajustesPaso1[1][FASE]             = 0;
+  ajustesPaso1[1][DEFAULT]          = 0;
+
+  ajustesPaso1[2][OFFSET]           = posicionesInicialesPiernaDerecha[3];
+  ajustesPaso1[2][PERIODO]          = 1000;
+  ajustesPaso1[2][AMPLITUD]         = 50;
+  ajustesPaso1[2][FASE]             = 180;
+  ajustesPaso1[2][DEFAULT]          = 0;
+
+  ajustesPaso1[3][OFFSET]           = posicionesInicialesPiernaDerecha[4];
+  ajustesPaso1[3][PERIODO]          = 1000;
+  ajustesPaso1[3][AMPLITUD]         = 50;
+  ajustesPaso1[3][FASE]             = 180;
+  ajustesPaso1[3][DEFAULT]          = 0;
+
+  ajustesPaso1[4][OFFSET]           = posicionesInicialesPiernaIzquierda[1];
+  ajustesPaso1[4][PERIODO]          = 1000;
+  ajustesPaso1[4][AMPLITUD]         = 50;
+  ajustesPaso1[4][FASE]             = 180;
+  ajustesPaso1[4][DEFAULT]          = 0;
+
+  ajustesPaso1[5][OFFSET]           = posicionesInicialesPiernaIzquierda[2];
+  ajustesPaso1[5][PERIODO]          = 1000;
+  ajustesPaso1[5][AMPLITUD]         = 50;
+  ajustesPaso1[5][FASE]             = 180;
+  ajustesPaso1[5][DEFAULT]          = 0;
+
+  ajustesPaso1[6][OFFSET]           = posicionesInicialesPiernaIzquierda[3];
+  ajustesPaso1[6][PERIODO]          = 1000;
+  ajustesPaso1[6][AMPLITUD]         = 50;
+  ajustesPaso1[6][FASE]             = 0;
+  ajustesPaso1[6][DEFAULT]          = 0;
+
+  ajustesPaso1[7][OFFSET]           = posicionesInicialesPiernaIzquierda[4];
+  ajustesPaso1[7][PERIODO]          = 1000;
+  ajustesPaso1[7][AMPLITUD]         = 50;
+  ajustesPaso1[7][FASE]             = 0;
+  ajustesPaso1[7][DEFAULT]          = 0;
+
+  ejecutar_movimiento(servosPaso1, ajustesPaso1, numServosPaso1, 0.25);
+
+
+  const byte numServosPaso2 = 7;
+  short ajustesPaso2[numServosPaso2][5];
+  short servosPaso2[numServosPaso2];
+
+  servosPaso2[0] = pinsServosPiernaDerecha[1];
+  servosPaso2[1] = pinsServosPiernaDerecha[2];
+  servosPaso2[2] = pinsServosPiernaDerecha[3];
+  servosPaso2[3] = pinsServosPiernaDerecha[4];
+  servosPaso2[4] = pinsServosCadera[2];
+  servosPaso2[5] = pinsServosCadera[0];
+  servosPaso2[6] = pinsServosPiernaIzquierda[0];
+
+
+  ajustesPaso2[0][OFFSET]           = posicionesActualesPCA9685[servosPaso2[0]];
+  ajustesPaso2[0][PERIODO]          = 1000;
+  ajustesPaso2[0][AMPLITUD]         = 40;
+  ajustesPaso2[0][FASE]             = 180;
+  ajustesPaso2[0][DEFAULT]          = 0;
+
+  ajustesPaso2[1][OFFSET]           = posicionesActualesPCA9685[servosPaso2[1]];
+  ajustesPaso2[1][PERIODO]          = 1000;
+  ajustesPaso2[1][AMPLITUD]         = 40;
+  ajustesPaso2[1][FASE]             = 180;
+  ajustesPaso2[1][DEFAULT]          = 0;
+
+  ajustesPaso2[2][OFFSET]           = posicionesActualesPCA9685[servosPaso2[2]];
+  ajustesPaso2[2][PERIODO]          = 1000;
+  ajustesPaso2[2][AMPLITUD]         = 40;
+  ajustesPaso2[2][FASE]             = 0;
+  ajustesPaso2[2][DEFAULT]          = 0;
+
+  ajustesPaso2[3][OFFSET]           = posicionesActualesPCA9685[servosPaso2[3]];
+  ajustesPaso2[3][PERIODO]          = 1000;
+  ajustesPaso2[3][AMPLITUD]         = 40;
+  ajustesPaso2[3][FASE]             = 0;
+  ajustesPaso2[3][DEFAULT]          = 0;
+
+  ajustesPaso2[4][OFFSET]           = posicionesInicialesCadera[2];
+  ajustesPaso2[4][PERIODO]          = 1800;
+  ajustesPaso2[4][AMPLITUD]         = 110;
+  ajustesPaso2[4][FASE]             = 180;
+  ajustesPaso2[4][DEFAULT]          = 0;
+
+  ajustesPaso2[5][OFFSET]           = posicionesInicialesCadera[0];
+  ajustesPaso2[5][PERIODO]          = 1000;
+  ajustesPaso2[5][AMPLITUD]         = 80;
+  ajustesPaso2[5][FASE]             = 180;
+  ajustesPaso2[5][DEFAULT]          = 0;
+  //
+  ajustesPaso2[6][OFFSET]           = posicionesInicialesPiernaIzquierda[0];
+  ajustesPaso2[6][PERIODO]          = 2000;
+  ajustesPaso2[6][AMPLITUD]         = 10;
+  ajustesPaso2[6][FASE]             = 0;
+  ajustesPaso2[6][DEFAULT]          = 0;
+
+  ejecutar_movimiento(servosPaso2, ajustesPaso2, numServosPaso2, 0.25);
+
+
+  const byte numServosPaso3 = 5;
+  short ajustesPaso3[numServosPaso3][5];
+  short servosPaso3[numServosPaso3];
+
+  servosPaso3[0] = pinsServosPiernaDerecha[1];
+  servosPaso3[1] = pinsServosPiernaDerecha[2];
+  servosPaso3[2] = pinsServosPiernaDerecha[3];
+  servosPaso3[3] = pinsServosPiernaDerecha[4];
+  servosPaso3[4] = pinsServosCadera[2];
+
+  ajustesPaso3[0][OFFSET]           = posicionesActualesPCA9685[servosPaso3[0]];
+  ajustesPaso3[0][PERIODO]          = 1000;
+  ajustesPaso3[0][AMPLITUD]         = 50;
+  ajustesPaso3[0][FASE]             = 0;
+  ajustesPaso3[0][DEFAULT]          = 0;
+
+  ajustesPaso3[1][OFFSET]           = posicionesActualesPCA9685[servosPaso3[1]];
+  ajustesPaso3[1][PERIODO]          = 1000;
+  ajustesPaso3[1][AMPLITUD]         = 50;
+  ajustesPaso3[1][FASE]             = 0;
+  ajustesPaso3[1][DEFAULT]          = 0;
+
+  ajustesPaso3[2][OFFSET]           = posicionesActualesPCA9685[servosPaso3[2]];
+  ajustesPaso3[2][PERIODO]          = 1000;
+  ajustesPaso3[2][AMPLITUD]         = 50;
+  ajustesPaso3[2][FASE]             = 180;
+  ajustesPaso3[2][DEFAULT]          = 0;
+
+  ajustesPaso3[3][OFFSET]           = posicionesActualesPCA9685[servosPaso3[3]];
+  ajustesPaso3[3][PERIODO]          = 1000;
+  ajustesPaso3[3][AMPLITUD]         = 50;
+  ajustesPaso3[3][FASE]             = 180;
+  ajustesPaso3[3][DEFAULT]          = 0;
+
+  ajustesPaso3[4][OFFSET]           = posicionesActualesPCA9685[servosPaso3[4]];
+  ajustesPaso3[4][PERIODO]          = 1000;
+  ajustesPaso3[4][AMPLITUD]         = 220;
+  ajustesPaso3[4][FASE]             = 0;
+  ajustesPaso3[4][DEFAULT]          = 0;
+
+  ejecutar_movimiento(servosPaso3, ajustesPaso3, numServosPaso3, 0.25);
+
+  const byte numServosPaso4 = 4;
+  short ajustesPaso4[numServosPaso4][5];
+  short servosPaso4[numServosPaso4];
+
+  servosPaso4[0] = pinsServosPiernaDerecha[1];
+  servosPaso4[1] = pinsServosPiernaDerecha[2];
+  servosPaso4[2] = pinsServosPiernaDerecha[3];
+  servosPaso4[3] = pinsServosPiernaDerecha[4];
+  // servosPaso4[4] = pinsServosPiernaIzquierda[1];
+  // servosPaso4[5] = pinsServosPiernaIzquierda[2];
+  // servosPaso4[6] = pinsServosPiernaIzquierda[3];
+  // servosPaso4[7] = pinsServosPiernaIzquierda[4];
+  // servosPaso2[8] = pinsServosPiernaIzquierda[0];
+
+  ajustesPaso4[0][OFFSET]           = posicionesActualesPCA9685[servosPaso4[0]];
+  ajustesPaso4[0][PERIODO]          = 250;
+  ajustesPaso4[0][AMPLITUD]         = 60;
+  ajustesPaso4[0][FASE]             = 180;
+  ajustesPaso4[0][DEFAULT]          = 0;
+
+  ajustesPaso4[1][OFFSET]           = posicionesActualesPCA9685[servosPaso4[1]];
+  ajustesPaso4[1][PERIODO]          = 250;
+  ajustesPaso4[1][AMPLITUD]         = 60;
+  ajustesPaso4[1][FASE]             = 180;
+  ajustesPaso4[1][DEFAULT]          = 0;
+
+  ajustesPaso4[2][OFFSET]           = posicionesActualesPCA9685[servosPaso4[2]];
+  ajustesPaso4[2][PERIODO]          = 250;
+  ajustesPaso4[2][AMPLITUD]         = 60;
+  ajustesPaso4[2][FASE]             = 0;
+  ajustesPaso4[2][DEFAULT]          = 0;
+
+  ajustesPaso4[3][OFFSET]           = posicionesActualesPCA9685[servosPaso4[3]];
+  ajustesPaso4[3][PERIODO]          = 250;
+  ajustesPaso4[3][AMPLITUD]         = 60;
+  ajustesPaso4[3][FASE]             = 0;
+  ajustesPaso4[3][DEFAULT]          = 0;
+
+  // ajustesPaso4[4][OFFSET]           = posicionesActualesPCA9685[servosPaso4[4]];
+  // ajustesPaso4[4][PERIODO]          = 250;
+  // ajustesPaso4[4][AMPLITUD]         = 70;
+  // ajustesPaso4[4][FASE]             = 0;
+  // ajustesPaso4[4][DEFAULT]          = 0;
+
+  // ajustesPaso4[5][OFFSET]           = posicionesActualesPCA9685[servosPaso4[5]];
+  // ajustesPaso4[5][PERIODO]          = 250;
+  // ajustesPaso4[5][AMPLITUD]         = 70;
+  // ajustesPaso4[5][FASE]             = 0;
+  // ajustesPaso4[5][DEFAULT]          = 0;
+
+  // ajustesPaso4[6][OFFSET]           = posicionesActualesPCA9685[servosPaso4[6]];
+  // ajustesPaso4[6][PERIODO]          = 250;
+  // ajustesPaso4[6][AMPLITUD]         = 70;
+  // ajustesPaso4[6][FASE]             = 180;
+  // ajustesPaso4[6][DEFAULT]          = 0;
+
+  // ajustesPaso4[7][OFFSET]           = posicionesActualesPCA9685[servosPaso4[7]];
+  // ajustesPaso4[7][PERIODO]          = 250;
+  // ajustesPaso4[7][AMPLITUD]         = 70;
+  // ajustesPaso4[7][FASE]             = 180;
+  // ajustesPaso4[7][DEFAULT]          = 0;
+
+
+  // ajustesPaso4[8][OFFSET]           = posicionesActualesPCA9685[servosPaso4[8]];
+  // ajustesPaso4[8][PERIODO]          = 300;
+  // ajustesPaso4[8][AMPLITUD]         = 20;
+  // ajustesPaso4[8][FASE]             = 180;
+  // ajustesPaso4[8][DEFAULT]          = 0;
+
+  ejecutar_movimiento(servosPaso4, ajustesPaso4, numServosPaso4, 0.25);
+}
+
+void mov_StrongLeft(){
+  const byte numServosPCA9685 = 1;
+  short ajustesStrongLeftPCA9685[numServosPCA9685][5];
+  short servosStrongLeftPCA9685[numServosPCA9685];
+  servosStrongLeftPCA9685[0] = pinsServosCodos[0];
+
+  const byte numServos = 1;
+  short ajustesStrongLeft[numServos][5];
+  Servo servosStrongLeft[numServos];
+  servosStrongLeft[0] = servosHombros[0];
+
+  ajustesStrongLeftPCA9685[0][OFFSET]           = posicionesInicialesCodos[0];
+  ajustesStrongLeftPCA9685[0][PERIODO]          = 800;
+  ajustesStrongLeftPCA9685[0][AMPLITUD]         = 95;
+  ajustesStrongLeftPCA9685[0][FASE]             = 0;
+  ajustesStrongLeftPCA9685[0][DEFAULT]          = 0;
+
+
+
+  ajustesStrongLeft[0][OFFSET]           = posicionesInicialesHombros[0];
+  ajustesStrongLeft[0][PERIODO]          = 800;
+  ajustesStrongLeft[0][AMPLITUD]         = 35;
+  ajustesStrongLeft[0][FASE]             = 180;
+  ajustesStrongLeft[0][DEFAULT]          = 0;
+
+  ejecutar_movimiento(servosStrongLeftPCA9685, ajustesStrongLeftPCA9685, numServosPCA9685, servosStrongLeft, ajustesStrongLeft, numServos, 0.5f);
+
+}
+
+void mov_StrongRight(){
+
+  const byte numServosPCA9685 = 1;
+  short ajustesStrongRightPCA9685[numServosPCA9685][5];
+  short servosStrongRightPCA9685[numServosPCA9685];
+  servosStrongRightPCA9685[0] = pinsServosCodos[1];
+
+  const byte numServos = 1;
+  short ajustesStrongRight[numServos][5];
+  Servo servosStrongRight[numServos];
+  servosStrongRight[0] = servosHombros[1];
+
+  ajustesStrongRightPCA9685[0][OFFSET]           = posicionesInicialesCodos[1];
+  ajustesStrongRightPCA9685[0][PERIODO]          = 800;
+  ajustesStrongRightPCA9685[0][AMPLITUD]         = 95;
+  ajustesStrongRightPCA9685[0][FASE]             = 180;
+  ajustesStrongRightPCA9685[0][DEFAULT]          = 0;
+
+  // ejecutar_movimiento(servosStrongRightPCA9685, ajustesStrongRightPCA9685, numServosPCA9685, 0.5f);
+
+  ajustesStrongRight[0][OFFSET]           = posicionesInicialesHombros[1];
+  ajustesStrongRight[0][PERIODO]          = 800;
+  ajustesStrongRight[0][AMPLITUD]         = 35;
+  ajustesStrongRight[0][FASE]             = 0;
+  ajustesStrongRight[0][DEFAULT]          = 0;
+
+  ejecutar_movimiento(servosStrongRightPCA9685, ajustesStrongRightPCA9685, numServosPCA9685, servosStrongRight, ajustesStrongRight, numServos, 0.5f);
+}
+
+void mov_lateral_iz(int repeticiones){
+  // mov_agacharse(0.25f);
+  for (byte loops = 0; loops < repeticiones; loops++) {
+    const byte numServosPaso1 = 2;
+    short ajustesPaso1[numServosPaso1][5];
+    short servosPaso1[numServosPaso1];
+
+    servosPaso1[0] = pinsServosCadera[0];
+    servosPaso1[1] = pinsServosCadera[2];
+
+    ajustesPaso1[0][OFFSET]           = posicionesInicialesCadera[0];
+    ajustesPaso1[0][PERIODO]          = 500;
+    ajustesPaso1[0][AMPLITUD]         = 30;
+    ajustesPaso1[0][FASE]             = 0;
+    ajustesPaso1[0][DEFAULT]          = 0;
+
+    ajustesPaso1[1][OFFSET]           = posicionesInicialesCadera[2];
+    ajustesPaso1[1][PERIODO]          = 500;
+    ajustesPaso1[1][AMPLITUD]         = 30;
+    ajustesPaso1[1][FASE]             = 0;
+    ajustesPaso1[1][DEFAULT]          = 0;
+    ejecutar_movimiento(servosPaso1, ajustesPaso1, numServosPaso1, 0.25f);
+    delay(100);
+    set_servo_position(servosPaso1[0], posicionesInicialesCadera[0]);
+    set_servo_position(servosPaso1[1], posicionesInicialesCadera[2]);
+    delay(100);
+  }
+  init_position();
+}
+
+void mov_lateral_de(int repeticiones){
+  // mov_agacharse(0.25f);
+  for (byte loops = 0; loops < repeticiones; loops++) {
+    const byte numServosPaso1 = 2;
+    short ajustesPaso1[numServosPaso1][5];
+    short servosPaso1[numServosPaso1];
+
+    servosPaso1[0] = pinsServosCadera[0];
+    servosPaso1[1] = pinsServosCadera[2];
+
+    ajustesPaso1[0][OFFSET]           = posicionesInicialesCadera[0];
+    ajustesPaso1[0][PERIODO]          = 500;
+    ajustesPaso1[0][AMPLITUD]         = 30;
+    ajustesPaso1[0][FASE]             = 180;
+    ajustesPaso1[0][DEFAULT]          = 0;
+
+    ajustesPaso1[1][OFFSET]           = posicionesInicialesCadera[2];
+    ajustesPaso1[1][PERIODO]          = 500;
+    ajustesPaso1[1][AMPLITUD]         = 30;
+    ajustesPaso1[1][FASE]             = 180;
+    ajustesPaso1[1][DEFAULT]          = 0;
+    ejecutar_movimiento(servosPaso1, ajustesPaso1, numServosPaso1, 0.25f);
+    delay(100);
+    set_servo_position(servosPaso1[0], posicionesInicialesCadera[0]);
+    set_servo_position(servosPaso1[1], posicionesInicialesCadera[2]);
+    delay(100);
+  }
+  init_position();
+}
+
+void mov_SUUUUUPER(){
+  init_position();
+  delay(120);
+
+  const byte numServosPCA9685 = 9;
+  short ajustesSUPERPCA9685[numServosPCA9685][5];
+  short servosSUPERPCA9685[numServosPCA9685];
+
+  servosSUPERPCA9685[0] = pinsServosPiernaDerecha[1];
+  servosSUPERPCA9685[1] = pinsServosPiernaDerecha[2];
+  servosSUPERPCA9685[2] = pinsServosPiernaDerecha[3];
+  servosSUPERPCA9685[3] = pinsServosPiernaDerecha[4];
+  servosSUPERPCA9685[4] = pinsServosCadera[0];
+  servosSUPERPCA9685[5] = pinsServosPiernaIzquierda[0];
+  servosSUPERPCA9685[6] = pinsServosPiernaIzquierda[4];
+  servosSUPERPCA9685[7] = pinsServosCodos[0];
+  servosSUPERPCA9685[8] = pinsServosCodos[1];
+
+
+  set_servo_position(servosHombros[0], 10);
+  set_servo_position(servosHombros[1], 168);
+  // const byte numServos = 1;
+  // short ajustesSUPER[numServos][5];
+  // Servo servosSUPER[numServos];
+  // servosSUPER[0] = servosHombros[0];
+  // servosSUPER[1] = servosHombros[1];
+
+  // ajustesSUPER[0][OFFSET]           = posicionesInicialesHombros[0];
+  // ajustesSUPER[0][PERIODO]          = 2000;
+  // ajustesSUPER[0][AMPLITUD]         = 35;
+  // ajustesSUPER[0][FASE]             = 180;
+  // ajustesSUPER[0][DEFAULT]          = 0;
+  //
+  // ajustesSUPER[1][OFFSET]           = posicionesInicialesHombros[1];
+  // ajustesSUPER[1][PERIODO]          = 2000;
+  // ajustesSUPER[1][AMPLITUD]         = 35;
+  // ajustesSUPER[1][FASE]             = 0;
+  // ajustesSUPER[1][DEFAULT]          = 0;
+
+  ajustesSUPERPCA9685[0][OFFSET]           = posicionesInicialesPiernaDerecha[1];
+  ajustesSUPERPCA9685[0][PERIODO]          = 2000;
+  ajustesSUPERPCA9685[0][AMPLITUD]         = 35;
+  ajustesSUPERPCA9685[0][FASE]             = 0;
+  ajustesSUPERPCA9685[0][DEFAULT]          = 0;
+
+  ajustesSUPERPCA9685[1][OFFSET]           = posicionesInicialesPiernaDerecha[2];
+  ajustesSUPERPCA9685[1][PERIODO]          = 2000;
+  ajustesSUPERPCA9685[1][AMPLITUD]         = 35;
+  ajustesSUPERPCA9685[1][FASE]             = 0;
+  ajustesSUPERPCA9685[1][DEFAULT]          = 0;
+
+  ajustesSUPERPCA9685[2][OFFSET]           = posicionesInicialesPiernaDerecha[3];
+  ajustesSUPERPCA9685[2][PERIODO]          = 2000;
+  ajustesSUPERPCA9685[2][AMPLITUD]         = 35;
+  ajustesSUPERPCA9685[2][FASE]             = 180;
+  ajustesSUPERPCA9685[2][DEFAULT]          = 0;
+
+  ajustesSUPERPCA9685[3][OFFSET]           = posicionesInicialesPiernaDerecha[4];
+  ajustesSUPERPCA9685[3][PERIODO]          = 2000;
+  ajustesSUPERPCA9685[3][AMPLITUD]         = 35;
+  ajustesSUPERPCA9685[3][FASE]             = 180;
+  ajustesSUPERPCA9685[3][DEFAULT]          = 0;
+
+  ajustesSUPERPCA9685[4][OFFSET]           = posicionesInicialesCadera[0];
+  ajustesSUPERPCA9685[4][PERIODO]          = 2000;
+  ajustesSUPERPCA9685[4][AMPLITUD]         = 30;
+  ajustesSUPERPCA9685[4][FASE]             = 180;
+  ajustesSUPERPCA9685[4][DEFAULT]          = 0;
+
+  ajustesSUPERPCA9685[5][OFFSET]           = posicionesInicialesPiernaIzquierda[0];
+  ajustesSUPERPCA9685[5][PERIODO]          = 2000;
+  ajustesSUPERPCA9685[5][AMPLITUD]         = 40;
+  ajustesSUPERPCA9685[5][FASE]             = 180;
+  ajustesSUPERPCA9685[5][DEFAULT]          = 0;
+
+  ajustesSUPERPCA9685[6][OFFSET]           = posicionesInicialesPiernaIzquierda[4];
+  ajustesSUPERPCA9685[6][PERIODO]          = 2000;
+  ajustesSUPERPCA9685[6][AMPLITUD]         = 40;
+  ajustesSUPERPCA9685[6][FASE]             = 180;
+  ajustesSUPERPCA9685[6][DEFAULT]          = 0;
+
+  ajustesSUPERPCA9685[7][OFFSET]           = posicionesInicialesCodos[0];
+  ajustesSUPERPCA9685[7][PERIODO]          = 2000;
+  ajustesSUPERPCA9685[7][AMPLITUD]         = 140;
+  ajustesSUPERPCA9685[7][FASE]             = 0;
+  ajustesSUPERPCA9685[7][DEFAULT]          = 0;
+
+  ajustesSUPERPCA9685[8][OFFSET]           = posicionesInicialesCodos[1];
+  ajustesSUPERPCA9685[8][PERIODO]          = 2000;
+  ajustesSUPERPCA9685[8][AMPLITUD]         = 140;
+  ajustesSUPERPCA9685[8][FASE]             = 180;
+  ajustesSUPERPCA9685[8][DEFAULT]          = 0;
+
+  ejecutar_movimiento(servosSUPERPCA9685, ajustesSUPERPCA9685, numServosPCA9685, 0.25f);
+
+  delay(150);
+  nipple_lights = true;
+
+  // ejecutar_movimiento(servosSUPERPCA9685, ajustesSUPERPCA9685, numServosPCA9685, servosSUPER, ajustesSUPER, numServos, 0.5f);
+}
+
+void mov_invencible(){
+  const byte numServos = 12;
+  short ajustesInvencible[numServos][5];
+  short servosInvencible[numServos];
+
+  servosInvencible[0] = pinsServosPiernaDerecha[1];
+  servosInvencible[1] = pinsServosPiernaDerecha[2];
+  servosInvencible[2] = pinsServosPiernaDerecha[3];
+  servosInvencible[3] = pinsServosPiernaDerecha[4];
+  servosInvencible[4] = pinsServosPiernaIzquierda[1];
+  servosInvencible[5] = pinsServosPiernaIzquierda[2];
+  servosInvencible[6] = pinsServosPiernaIzquierda[3];
+  servosInvencible[7] = pinsServosPiernaIzquierda[4];
+  servosInvencible[8] = pinsServosCadera[0];
+  servosInvencible[9] = pinsServosCadera[2];
+  servosInvencible[10] = pinsServosPiernaDerecha[0];
+  servosInvencible[11] = pinsServosPiernaIzquierda[0];
+
+  ajustesInvencible[0][OFFSET]           = posicionesInicialesPiernaDerecha[1];
+  ajustesInvencible[0][PERIODO]          = 1000;
+  ajustesInvencible[0][AMPLITUD]         = 45;
+  ajustesInvencible[0][FASE]             = 0;
+  ajustesInvencible[0][DEFAULT]          = 0;
+
+  ajustesInvencible[1][OFFSET]           = posicionesInicialesPiernaDerecha[2];
+  ajustesInvencible[1][PERIODO]          = 1000;
+  ajustesInvencible[1][AMPLITUD]         = 45;
+  ajustesInvencible[1][FASE]             = 0;
+  ajustesInvencible[1][DEFAULT]          = 0;
+
+  ajustesInvencible[2][OFFSET]           = posicionesInicialesPiernaDerecha[3];
+  ajustesInvencible[2][PERIODO]          = 1000;
+  ajustesInvencible[2][AMPLITUD]         = 45;
+  ajustesInvencible[2][FASE]             = 180;
+  ajustesInvencible[2][DEFAULT]          = 0;
+
+  ajustesInvencible[3][OFFSET]           = posicionesInicialesPiernaDerecha[4];
+  ajustesInvencible[3][PERIODO]          = 1000;
+  ajustesInvencible[3][AMPLITUD]         = 45;
+  ajustesInvencible[3][FASE]             = 180;
+  ajustesInvencible[3][DEFAULT]          = 0;
+
+  ajustesInvencible[4][OFFSET]           = posicionesInicialesPiernaIzquierda[1];
+  ajustesInvencible[4][PERIODO]          = 1000;
+  ajustesInvencible[4][AMPLITUD]         = 45;
+  ajustesInvencible[4][FASE]             = 180;
+  ajustesInvencible[4][DEFAULT]          = 0;
+
+  ajustesInvencible[5][OFFSET]           = posicionesInicialesPiernaIzquierda[2];
+  ajustesInvencible[5][PERIODO]          = 1000;
+  ajustesInvencible[5][AMPLITUD]         = 45;
+  ajustesInvencible[5][FASE]             = 180;
+  ajustesInvencible[5][DEFAULT]          = 0;
+
+  ajustesInvencible[6][OFFSET]           = posicionesInicialesPiernaIzquierda[3];
+  ajustesInvencible[6][PERIODO]          = 1000;
+  ajustesInvencible[6][AMPLITUD]         = 45;
+  ajustesInvencible[6][FASE]             = 0;
+  ajustesInvencible[6][DEFAULT]          = 0;
+
+  ajustesInvencible[7][OFFSET]           = posicionesInicialesPiernaIzquierda[4];
+  ajustesInvencible[7][PERIODO]          = 1000;
+  ajustesInvencible[7][AMPLITUD]         = 45;
+  ajustesInvencible[7][FASE]             = 0;
+  ajustesInvencible[7][DEFAULT]          = 0;
+
+  ajustesInvencible[8][OFFSET]           = posicionesInicialesCadera[0];
+  ajustesInvencible[8][PERIODO]          = 1000;
+  ajustesInvencible[8][AMPLITUD]         = 30;
+  ajustesInvencible[8][FASE]             = 180;
+  ajustesInvencible[8][DEFAULT]          = 0;
+
+  ajustesInvencible[9][OFFSET]           = posicionesInicialesCadera[2];
+  ajustesInvencible[9][PERIODO]          = 1000;
+  ajustesInvencible[9][AMPLITUD]         = 30;
+  ajustesInvencible[9][FASE]             = 0;
+  ajustesInvencible[9][DEFAULT]          = 0;
+
+  ajustesInvencible[10][OFFSET]           = posicionesInicialesPiernaDerecha[0];
+  ajustesInvencible[10][PERIODO]          = 1000;
+  ajustesInvencible[10][AMPLITUD]         = 30;
+  ajustesInvencible[10][FASE]             = 0;
+  ajustesInvencible[10][DEFAULT]          = 0;
+
+  ajustesInvencible[11][OFFSET]           = posicionesInicialesPiernaIzquierda[0];
+  ajustesInvencible[11][PERIODO]          = 1000;
+  ajustesInvencible[11][AMPLITUD]         = 30;
+  ajustesInvencible[11][FASE]             = 180;
+  ajustesInvencible[11][DEFAULT]          = 0;
+
+  ejecutar_movimiento(servosInvencible, ajustesInvencible, numServos, 0.25f);
+}
