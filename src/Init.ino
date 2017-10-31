@@ -67,7 +67,7 @@ void init_posiciones_iniciales(){
   /////////////////////////////////////////
   // Posiciones iniciales PIERNA IZQUIERDA //
   /////////////////////////////////////////
-  posicionesInicialesPiernaIzquierda[0] = 130;
+  posicionesInicialesPiernaIzquierda[0] = 135;
   posicionesInicialesPiernaIzquierda[1] = 133; //143
   posicionesInicialesPiernaIzquierda[2] = 160; //170
   posicionesInicialesPiernaIzquierda[3] = 20; //10
@@ -76,7 +76,7 @@ void init_posiciones_iniciales(){
   ///////////////////////////////////////////
   // Posiciones iniciales PIERNA DERECHA //
   ///////////////////////////////////////////
-  posicionesInicialesPiernaDerecha[0] = 60;
+  posicionesInicialesPiernaDerecha[0] = 70;
   posicionesInicialesPiernaDerecha[1] = 38; //28
   posicionesInicialesPiernaDerecha[2] = 23; //18
   posicionesInicialesPiernaDerecha[3] = 151; //161
@@ -87,11 +87,12 @@ void init_posiciones_iniciales(){
   /////////////////////////////////////////
   posicionesInicialesCadera[0] = 130;
   posicionesInicialesCadera[1] = 58;
-  posicionesInicialesCadera[2] = 80;
+  posicionesInicialesCadera[2] = 85;
 
   /////////////////////////////////////////
   // Posiciones iniciales HOMBROS //
   /////////////////////////////////////////
-  posicionesInicialesHombros[0] = 180;
-  posicionesInicialesHombros[1] = 5;
+  posicionesInicialesHombros[0] = 165;
+  posicionesInicialesHombros[1] = 15;
+
 }
