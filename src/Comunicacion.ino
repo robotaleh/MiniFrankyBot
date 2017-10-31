@@ -34,6 +34,8 @@ void update_tasks() {
   }else if((millis()-last_update) > 5 && letra != ' '){
     // Si no se ha recibido nada en los últimos 5ms y hay alguna letra pendiente, ejecuta su acción correspondiente.
     execute_task(letra, (valor!="")?valor.toInt():0);
+    letra = ' ';
+    valor = "";
   }
 }
 
