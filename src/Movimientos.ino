@@ -22,6 +22,11 @@ void init_position(){
   set_servo_position(pinsServosCadera[2], posicionesInicialesCadera[2]);
   set_servo_position(servosHombros[0], posicionesInicialesHombros[0]);
   set_servo_position(servosHombros[1], posicionesInicialesHombros[1]);
+  set_servo_position(pinsServosCodos[0], posicionesInicialesCodos[0]);
+  set_servo_position(pinsServosCodos[1], posicionesInicialesCodos[1]);
+
+  // set_servo_position(servosHombros[0], 70);
+  // set_servo_position(servosHombros[1], 140);
   delay(100);
 }
 
