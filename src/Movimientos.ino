@@ -114,6 +114,46 @@ void mov_salto(int repeticiones) {
 }
 
 /**
+* Gira sobre si mismo hacia la derecha
+* @param repeticiones Número de "toques" del giro.
+*/
+void mov_rotate_de(int repeticiones) {
+  short loops = 0;
+  do {
+
+    // Prepara el salto agachandose lentamente
+    set_servo_position(pinsServosCadera[1], 100);
+    // delay(1000);
+    mov_agacharse(0.25);
+    init_position();
+    delay(120);
+
+    loops ++;
+  } while(loops < repeticiones);
+
+}
+
+/**
+* Gira sobre si mismo hacia la izquierda
+* @param repeticiones Número de "toques" del giro.
+*/
+void mov_rotate_iz(int repeticiones) {
+  short loops = 0;
+  do {
+
+    // Prepara el salto agachandose lentamente
+    set_servo_position(pinsServosCadera[1], 16);
+    // delay(1000);
+    mov_agacharse(0.25);
+    init_position();
+    delay(120);
+
+    loops ++;
+  } while(loops < repeticiones);
+
+}
+
+/**
 * Efectua un paso, compuesto por varios segmentos de movimientos.
 * @param repeticiones Número de pasos que dará.
 */
