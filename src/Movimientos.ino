@@ -47,49 +47,49 @@ void mov_agacharse(float repeticiones){
 
   ajustesAgacharse[0][OFFSET]           = posicionesInicialesPiernaDerecha[1];
   ajustesAgacharse[0][PERIODO]          = 1000;
-  ajustesAgacharse[0][AMPLITUD]         = 20;
+  ajustesAgacharse[0][AMPLITUD]         = 30;
   ajustesAgacharse[0][FASE]             = 0;
   ajustesAgacharse[0][DEFAULT]          = 0;
 
   ajustesAgacharse[1][OFFSET]           = posicionesInicialesPiernaDerecha[2];
   ajustesAgacharse[1][PERIODO]          = 1000;
-  ajustesAgacharse[1][AMPLITUD]         = 20;
+  ajustesAgacharse[1][AMPLITUD]         = 30;
   ajustesAgacharse[1][FASE]             = 0;
   ajustesAgacharse[1][DEFAULT]          = 0;
 
   ajustesAgacharse[2][OFFSET]           = posicionesInicialesPiernaDerecha[3];
   ajustesAgacharse[2][PERIODO]          = 1000;
-  ajustesAgacharse[2][AMPLITUD]         = 20;
+  ajustesAgacharse[2][AMPLITUD]         = 30;
   ajustesAgacharse[2][FASE]             = 180;
   ajustesAgacharse[2][DEFAULT]          = 0;
 
   ajustesAgacharse[3][OFFSET]           = posicionesInicialesPiernaDerecha[4];
   ajustesAgacharse[3][PERIODO]          = 1000;
-  ajustesAgacharse[3][AMPLITUD]         = 20;
+  ajustesAgacharse[3][AMPLITUD]         = 30;
   ajustesAgacharse[3][FASE]             = 180;
   ajustesAgacharse[3][DEFAULT]          = 0;
 
   ajustesAgacharse[4][OFFSET]           = posicionesInicialesPiernaIzquierda[1];
   ajustesAgacharse[4][PERIODO]          = 1000;
-  ajustesAgacharse[4][AMPLITUD]         = 20;
+  ajustesAgacharse[4][AMPLITUD]         = 30;
   ajustesAgacharse[4][FASE]             = 180;
   ajustesAgacharse[4][DEFAULT]          = 0;
 
   ajustesAgacharse[5][OFFSET]           = posicionesInicialesPiernaIzquierda[2];
   ajustesAgacharse[5][PERIODO]          = 1000;
-  ajustesAgacharse[5][AMPLITUD]         = 20;
+  ajustesAgacharse[5][AMPLITUD]         = 30;
   ajustesAgacharse[5][FASE]             = 180;
   ajustesAgacharse[5][DEFAULT]          = 0;
 
   ajustesAgacharse[6][OFFSET]           = posicionesInicialesPiernaIzquierda[3];
   ajustesAgacharse[6][PERIODO]          = 1000;
-  ajustesAgacharse[6][AMPLITUD]         = 20;
+  ajustesAgacharse[6][AMPLITUD]         = 30;
   ajustesAgacharse[6][FASE]             = 0;
   ajustesAgacharse[6][DEFAULT]          = 0;
 
   ajustesAgacharse[7][OFFSET]           = posicionesInicialesPiernaIzquierda[4];
   ajustesAgacharse[7][PERIODO]          = 1000;
-  ajustesAgacharse[7][AMPLITUD]         = 20;
+  ajustesAgacharse[7][AMPLITUD]         = 30;
   ajustesAgacharse[7][FASE]             = 0;
   ajustesAgacharse[7][DEFAULT]          = 0;
 
