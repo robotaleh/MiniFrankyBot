@@ -82,6 +82,9 @@ bool nipple_lights = false;
 
 void setup() {
   init_all();
+  delay(500);
+  init_position();
+  delay(500);
 }
 
 void loop() {
