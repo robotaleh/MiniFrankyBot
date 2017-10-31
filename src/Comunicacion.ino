@@ -46,21 +46,47 @@ void update_tasks() {
 */
 void execute_task(char comando, int valor){
   switch (comando) {
-    case BRAZO_DERECHO:
+    case STRONG_RIGHT:
+    mov_StrongRight();
     break;
-    case BRAZO_IZQUIERDO:
+    case STRONG_LEFT:
+    mov_StrongLeft();
     break;
-    case ADELANTE:
-      mov_paso(1);
+    case SALTITOS:
+    mov_salto(1);
+    break;
+    case SUUUUUUPER:
+    mov_SUUUUUPER();
     break;
     case LOWKICK_DERECHA:
-      mov_lowkick_derecha(1);
+    mov_lowkick_derecha(1);
     break;
-    case AIRKICK:
-      mov_airKick();
+    case LOWKICK_IZQUIERDA:
+    mov_lowkick_izquierda(1);
+    break;
+    case ROTATE_DERECHA:
+    mov_rotate_de(1);
+    break;
+    case ROTATE_IZQUIERDA:
+    mov_rotate_iz(1);
+    break;
+    case POS_INICIAL:
+    init_position();
+    break;
+    case INVINCIBLE_MOD:
+    mov_invencible();
+    break;
+    case DESPL_DERECHA:
+    mov_lateral_de(1);
+    break;
+    case DESPL_IZQUIERDA:
+    mov_lateral_iz(1);
+    break;
+    case AGACHARSE:
+    mov_agacharse(0.25);
     break;
     default:
-    init_position();
+    // init_position();
     break;
   }
 }

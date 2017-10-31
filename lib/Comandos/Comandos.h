@@ -6,8 +6,20 @@
 //       para mantener la integridad de los movimientos.                                                  //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#define BRAZO_DERECHO 'D'
-#define BRAZO_IZQUIERDO 'I'
-#define ADELANTE 'W'
+#define STRONG_RIGHT 'D'
+#define STRONG_LEFT 'I'
+#define LOWKICK_DERECHA 'd'
+#define LOWKICK_IZQUIERDA 'i'
 #define AIRKICK 'a'
-#define LOWKICK_DERECHA 'p'
+#define INVINCIBLE_MOD 'z'
+
+#define SALTITOS 'J'
+#define ADELANTE 'W'
+#define DESPL_DERECHA 'R'
+#define DESPL_IZQUIERDA 'L'
+#define ADELANTE 'W'
+#define ROTATE_DERECHA 'q'
+#define ROTATE_IZQUIERDA 'e'
+#define SUUUUUUPER 'S'
+#define AGACHARSE 'u'
+#define POS_INICIAL 'o'
