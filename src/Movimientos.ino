@@ -1049,6 +1049,10 @@ void mov_SUUUUUPER(){
   // ejecutar_movimiento(servosSUPERPCA9685, ajustesSUPERPCA9685, numServosPCA9685, servosSUPER, ajustesSUPER, numServos, 0.5f);
 }
 
+
+/**
+* Baja el centro de gravedad para disminuir las posibilidades de caer
+*/
 void mov_invencible(){
   const byte numServos = 12;
   short ajustesInvencible[numServos][5];
