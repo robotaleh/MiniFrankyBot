@@ -30,7 +30,7 @@ void init_position(){
 * @param repeticiones Número de períodos a ejecutar
 */
 void mov_agacharse(float repeticiones){
-  init_position();
+  // init_position();
 
   const byte numServos = 8;
   short ajustesAgacharse[numServos][5];
