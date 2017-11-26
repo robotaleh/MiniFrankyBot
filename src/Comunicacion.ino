@@ -85,6 +85,8 @@ void execute_task(char comando, int valor){
     case AGACHARSE:
     mov_agacharse(0.25);
     break;
+    case POS_CADERA:
+      set_servo_position(pinsServosCadera[1], valor);
     default:
     // init_position();
     break;

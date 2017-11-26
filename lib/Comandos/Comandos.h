@@ -23,3 +23,4 @@
 #define SUUUUUUPER 'S'
 #define AGACHARSE 'u'
 #define POS_INICIAL 'o'
+#define POS_CADERA 'C'
